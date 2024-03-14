@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 5489765062055985837}
   - component: {fileID: 5732308491260136605}
   - component: {fileID: 1448688216524790149}
+  - component: {fileID: 8644755830606755505}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -402,6 +403,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockBackTime: 0.2
+--- !u!114 &8644755830606755505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585301156500591387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b112d8b137751f4c817b548db0aac43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullStaminaImage: {fileID: 0}
+  emptyStaminaImage: {fileID: 0}
+  timeBetweenStaminaRefresh: 3
 --- !u!1 &5577796540888276402
 GameObject:
   m_ObjectHideFlags: 0

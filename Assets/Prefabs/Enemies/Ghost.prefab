@@ -96,12 +96,15 @@ GameObject:
   - component: {fileID: 8585838555996788298}
   - component: {fileID: 1935204307944641107}
   - component: {fileID: 5838350991738833383}
-  - component: {fileID: 823087093738397805}
+  - component: {fileID: 5847749619734347353}
   - component: {fileID: 3453470007834083079}
   - component: {fileID: 2983204612614064771}
   - component: {fileID: 6738846406469484522}
   - component: {fileID: 6286319983953779150}
   - component: {fileID: 6987607181091814639}
+  - component: {fileID: 4622588909154098577}
+  - component: {fileID: 478376311382712592}
+  - component: {fileID: 7523374241087209680}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -239,7 +242,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &823087093738397805
+--- !u!114 &5847749619734347353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,6 +255,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 4622588909154098577}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 1
 --- !u!114 &3453470007834083079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,3 +326,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6f93db2c59f9346b17d20c54fe744a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4622588909154098577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805952043317184794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1babeacfecd57847aa910dc22d4c6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6664470074401003272, guid: 9b8790823e42b9f4d9ec00b89189636e, type: 3}
+  bulletMoveSpeed: 6
+  burstCount: 12
+  projectilesPerBurst: 14
+  angleSpread: 165
+  startingDistance: 0.3
+  timeBetweenBursts: 1
+  restTime: 0.1
+  stagger: 1
+  oscillate: 1
+--- !u!210 &478376311382712592
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805952043317184794}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+--- !u!114 &7523374241087209680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805952043317184794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3e9d3f950883d4b86b516ec79601d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldCoin: {fileID: 3901798403362635041, guid: 5cafab12e36f7e54f98eacf89be29eed, type: 3}
+  healthGlobe: {fileID: 3901798403362635041, guid: 1001155592ac316479326bb74924dc5a, type: 3}
+  staminaGlobe: {fileID: 3901798403362635041, guid: d36b6b8afe374314abd773f91a523b14, type: 3}
