@@ -22,9 +22,10 @@ public class AreaExit : MonoBehaviour
 
     private IEnumerator LoadSceneRoutine()
     {
-        while (waitToLoadTime >= 0)
+        float currentWaitTime = waitToLoadTime; 
+        while (currentWaitTime > 0)
         {
-            waitToLoadTime -= Time.deltaTime;
+            currentWaitTime -= Time.deltaTime;
             yield return null;
         }
 
